@@ -14,7 +14,7 @@ describe('my app', function() {
 
 
     it('should render have filter input', function() {
-      expect(element(by.css('input.search')).length).toBeGreaterThan(0)
+      expect(element(by.css('input[type=search]')).isPresent()).toBe(true)
     });
 
   });
