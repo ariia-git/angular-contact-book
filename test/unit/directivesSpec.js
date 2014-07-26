@@ -5,10 +5,11 @@
 describe('directives', function() {
   beforeEach(module('templates'));
   beforeEach(module('myApp.directives'));
-  beforeEach(module('myApp.controllers'));
-  var MAX_COUNT = 27, BY_PAGE = 10;
-  var MAX_PAGE = Math.floor(MAX_COUNT / BY_PAGE) + ((MAX_COUNT % BY_PAGE) ? 1 : 0) - 1;
-  describe('pagination', function() {
+
+  describe('pagination directive', function() {
+    beforeEach(module('myApp.controllers'));
+    var MAX_COUNT = 27, BY_PAGE = 10;
+    var MAX_PAGE = Math.floor(MAX_COUNT / BY_PAGE) + ((MAX_COUNT % BY_PAGE) ? 1 : 0) - 1;
     var element, $scope;
 
     // set up $scope & borrow some methods from ContactsTableController

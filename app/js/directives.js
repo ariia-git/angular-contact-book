@@ -89,5 +89,17 @@
           }
         ]
       };
-    });
+    })
+    .directive('onBeforeunload', ['$parse', '$window', function ($parse, $window) {
+      return {
+        restrict: 'A',
+        scope: false,
+        link: function(scope, el, attrs){
+          if ($window.onbeforeunload) {
+            throw new Error('Cannot do two things onbeforeunload, sorry.');
+          }
+          $window.onbeforeunload = $parse(attrs.onBeforeunload).bind(this, scope);
+        }
+      };
+    }]);
 })();

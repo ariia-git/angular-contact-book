@@ -91,6 +91,10 @@
       };
 
       $scope.delete = PeopleStorage.removeById;
+      // onbeforeunload popup will be shown in IE in anyway, should handle separately
+      $scope.notifyChanges = function(){
+        return $scope.beingEdited.length ? "There are some unsaved changes" : null
+      }
       $scope.$watch('page', function(newValue, oldValue) {
         if (newValue !== oldValue ) {
           $scope.beingEdited = [];
