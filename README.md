@@ -2,3 +2,4 @@
 [![Build Status](https://travis-ci.org/sudodoki/angular-contact-book.svg?branch=master)](https://travis-ci.org/sudodoki/angular-contact-book)  
 [See it yourself](http://sudodoki.github.io/angular-contact-book/app).  
 Best viewed in Chrome.  
+TODO: add edit mode being enabled on contact row click
