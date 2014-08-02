@@ -1,4 +1,4 @@
-<tr >
+<tr ng-click="initEdit()">
   <td>{{contact.lastName}}</td>
   <td>{{contact.firstName}}</td>
   <td>{{contact.age}}</td>
@@ -7,7 +7,7 @@
   <td>{{contact.lastEdited | date:'MM/dd/yy'}}<br/>{{contact.lastEdited | date:'mediumTime'}}</td>
   <td>
     <span>{{contact.isActive ? '✓' : '&nbsp;&nbsp;&nbsp;'}}</span>
-    <button title='Edit' class='edit' ng-click="initEdit()"></button>
+    <button title='Edit' class='edit'></button>
     <button title='Delete' class='delete' ng-click="delete({id: contact.id})"></button>
   </td>
 </tr>
